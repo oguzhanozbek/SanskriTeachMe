@@ -26,3 +26,23 @@ body {
   border-radius: 5px;           /* Optional: rounded corners */
   background-color: burlywood;
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: burlywood;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+
+.mid-component{
+  margin: 50px;
+  text-align: center;
+}
+
+.image{
+  width: 15px;
+}
