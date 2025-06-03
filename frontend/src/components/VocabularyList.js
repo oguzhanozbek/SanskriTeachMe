@@ -5,7 +5,6 @@ function VocabularyList({ items }) {
     <div className="vocab-list">
       {items.map(({ image, sound, sanskrit, pronunciation, english }, index) => (
         <div key={index} className="vocab-row">
-          
           <div className="col image-col">
             <img className='numimage' src={image} alt={english} />
           </div>
