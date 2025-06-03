@@ -1,0 +1,258 @@
+/* GLOBAL SETTINGS */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf5;
+  color: #2c2c2c;
+}
+
+/* CONTAINER */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(to right, #f6d365, #fda085);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Logo left, nav items right */
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  background-color: white;
+  color: #444;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #ffcd84;
+  color: #000;
+}
+
+/* MID SECTION */
+.mid-component {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.mid-component h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.mid-component p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* ROW SECTION */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.image {
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.text-block {
+  flex: 1;
+  padding: 1rem;
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+h2 {
+  margin-bottom: 0.6rem;
+  color: #222;
+}
+
+/* VOCAB BOX */
+.vocab-row {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 100px 50px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  margin: 1.5rem auto;
+  max-width: 800px;
+  align-items: center;
+}
+
+.sound-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fda085;
+  transition: 0.3s;
+}
+
+.sound-button:hover {
+  color: #ff8c42;
+}
+
+.text-col p {
+  margin: 0.2rem 0;
+}
+
+.sanskrit-row {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.pronunciation-row,
+.english-row {
+  font-size: 16px;
+  color: #666;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #f6d365;
+  color: #222;
+  text-align: center;
+  padding: 0.7rem 0;
+  font-size: 14px;
+  margin-top: auto;
+  border-top: 1px solid #f0c97d;
+  border-radius: 20px 20px 0 0;
+}
+
+/* WHATSAPP ICON IN FOOTER */
+.footer img,
+.footer i {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf5;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #2c2c2c;
+}
+
+/* Welcome section */
+.mid-component {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  padding: 0 1rem;
+}
+
+/* Content rows */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  max-width: 1100px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+/* Images */
+.image {
+  width: 280px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Text blocks */
+.text-block {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  padding: 0 1rem;
+}
+
+.text-block h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #222;
+  border-bottom: 3px solid #f6d365;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* List styling */
+.text-block ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
+
+.text-block li {
+  margin-bottom: 0.7rem;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .text-block {
+    padding: 0;
+  }
+
+  .text-block h2 {
+    font-size: 1.4rem;
+  }
+}
