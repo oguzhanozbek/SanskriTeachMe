@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Numbers from './pages/Numbers';
 import Homepage from './pages/Homepage';
+import NumbersAssessment from './pages/NumbersAssessment';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/numbers" element={<Numbers />} />
+            <Route path="/numbers-assessment" element={<NumbersAssessment />} />
           </Routes>
         </main>
 
