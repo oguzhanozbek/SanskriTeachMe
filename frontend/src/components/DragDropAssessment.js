@@ -1,10 +1,23 @@
-// DragDropAssessment.js
-import React, { useState } from 'react';
-import './DragDropAssessment.css';
+import React, { useState, useEffect } from 'react';
 
 function DragDropAssessment({ questions }) {
   const [answers, setAnswers] = useState({});
   const [correctCount, setCorrectCount] = useState(0);
+  const [shuffledTargets, setShuffledTargets] = useState([]);
+
+  const shuffleArray = (array) => {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  };
+
+  useEffect(() => {
+    const targets = questions.map(q => q.sanskrit);
+    setShuffledTargets(shuffleArray(targets));
+  }, [questions]);
 
   const handleDrop = (english, target) => {
     const isCorrect = questions.find(q => q.english === english && q.sanskrit === target);
@@ -15,7 +28,7 @@ function DragDropAssessment({ questions }) {
   return (
     <div className="assessment-container">
       <div className="drop-zones">
-        {questions.map(({ sanskrit }) => (
+        {shuffledTargets.map((sanskrit) => (
           <div
             key={sanskrit}
             className="drop-zone"
