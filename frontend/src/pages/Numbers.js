@@ -83,7 +83,7 @@ function Numbers() {
       </div>
       <div className="mid-message">
         <p>Want to assess your knowledge in a fun interactive way? Click below, then.</p>
-        <p><a style={{color:"red", textDecoration:"None"}} href="/">Numbers Knowledge texts</a></p>
+        <p><a style={{color:"red", textDecoration:"None"}} href="/">Numbers Knowledge Test</a></p>
       </div>
     </div>
   )
