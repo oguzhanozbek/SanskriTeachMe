@@ -75,7 +75,18 @@ const numbersData = [
 ];
 
 function Numbers() {
-  return <VocabularyList title="Numbers in Sanskrit" items={numbersData} />;
+  return(
+    <div className="mid-message">
+      <h2>Numbers</h2>
+      <div className="numbers-grid-wrapper">
+        <VocabularyList title="Numbers in Sanskrit" items={numbersData} />
+      </div>
+      <div className="mid-message">
+        <p>Want to assess your knowledge in a fun interactive way? Click below, then.</p>
+        <p><a style={{color:"red", textDecoration:"None"}} href="/">Numbers Knowledge texts</a></p>
+      </div>
+    </div>
+  )
 }
 
 export default Numbers;

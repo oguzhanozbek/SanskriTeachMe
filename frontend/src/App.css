@@ -38,9 +38,9 @@ body {
 .navbar li a {
   text-decoration: none;
   color: #333;
-  border: 1px solid #ccc;       /* Add border */
-  padding: 0.5rem 1rem;         /* Space inside the border */
-  border-radius: 5px;           /* Optional: rounded corners */
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   background-color: burlywood;
 }
 
@@ -94,19 +94,19 @@ body {
 
 .vocab-row {
   display: flex;
-  grid-template-columns: 150px 50px 1fr;
-  grid-template-rows: repeat(3, auto);
-  gap: 10px;
-  align-items: center;
-  border: 1px solid #ddd;
+  width: 100%; /* full width of the container */
+  max-width: 250px; /* limit so all rows look same width */
+  border: 5px solid #eee;
   padding: 10px;
   border-radius: 8px;
-  border-color:  #eee;
-  border-width: 5px;
   margin: 10px auto;
-  margin-left: 10px;
-  margin-right: 1600px;
+  align-items: center;
+  box-sizing: border-box; /* ensures padding is included in total width */
+  background-color: #fff8f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  gap: 15px;
 }
+
 
 .image-col {
   grid-row: 1 / span 3;
@@ -144,4 +144,35 @@ body {
   margin: 0;
   font-size: 16px;
   color: #555;
+}
+
+.numbers-grid-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.numbers-grid-wrapper .vocab-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.numbers-grid-wrapper .vocab-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid burlywood;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff8f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mid-message {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
 }
